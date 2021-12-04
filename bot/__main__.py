@@ -229,7 +229,9 @@ botcmds = [
         (f'{BotCommands.RestartCommand}','Restart the bot [owner/sudo only]'),
         (f'{BotCommands.LogCommand}','Get the Bot Log [owner/sudo only]'),
         (f'{BotCommands.RssHelpCommand}','Get help for RSS feeds module'),
-        (f'{BotCommands.TsHelpCommand}','Get help for Torrent search module')
+        (f'{BotCommands.TsHelpCommand}','Get help for Torrent search module'),
+        (f'{BotCommands.MediaInfoCommand}','Get media info for files'),
+        (f'{BotCommands.LookCommand}','Get Looking for Files')
     ]
 '''
 
