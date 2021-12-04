@@ -42,5 +42,6 @@ class _BotCommands:
         self.QbZipLeechCommand = 'qbzipleech'
         self.LeechWatchCommand = 'leechwatch'
         self.LeechZipWatchCommand = 'leechzipwatch'
+        self.LookCommand= 'look'
 
 BotCommands = _BotCommands()
