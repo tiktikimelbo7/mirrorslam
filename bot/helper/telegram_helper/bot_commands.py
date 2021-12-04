@@ -44,5 +44,5 @@ class _BotCommands:
         self.LeechZipWatchCommand = 'leechzipwatch'
         self.LookCommand = 'look'
         self.MediaInfoCommand = 'mediainfo'
-
+        self.ConfigMenuCommand = 'config'
 BotCommands = _BotCommands()
