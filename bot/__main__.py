@@ -206,7 +206,6 @@ def bot_help(update, context):
     reply_markup = InlineKeyboardMarkup(button.build_menu(1))
     sendMarkup(help_string, context.bot, update, reply_markup)
 
-'''
 botcmds = [
         (f'{BotCommands.HelpCommand}','Get Detailed Help'),
         (f'{BotCommands.MirrorCommand}', 'Start Mirroring'), 
@@ -233,7 +232,6 @@ botcmds = [
         (f'{BotCommands.MediaInfoCommand}','Get media info for files'),
         (f'{BotCommands.LookCommand}','Get Looking for Files')
     ]
-'''
 
 def main():
     fs_utils.start_cleanup()
