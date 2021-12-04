@@ -175,6 +175,8 @@ help = Telegraph(access_token=telegraph_token).create_page(
 help_string = f'''
 /{BotCommands.PingCommand}: Check how long it takes to Ping the Bot
 
+/{BotCommands.ConfigMenuCommand}: Check the variables and edit it !!
+
 /{BotCommands.AuthorizeCommand}: Authorize a chat or a user to use the bot (Can only be invoked by Owner & Sudo of the bot)
 
 /{BotCommands.UnAuthorizeCommand}: Unauthorize a chat or a user to use the bot (Can only be invoked by Owner & Sudo of the bot)
@@ -232,7 +234,7 @@ botcmds = [
         (f'{BotCommands.TsHelpCommand}','Get help for Torrent search module'),
         (f'{BotCommands.MediaInfoCommand}','Get media info for files'),
         (f'{BotCommands.LookCommand}','Get Looking for Files')
-    ]
+]
 
 def main():
     fs_utils.start_cleanup()
