@@ -208,7 +208,7 @@ def bot_help(update, context):
 
 botcmds = [
         (f'{BotCommands.HelpCommand}','Get Detailed Help'),
-        (f'{BotCommands.StartCommand}','Start The Bot 😊'),
+        (f'{BotCommands.StartCommand}','Start The Bot'),
         (f'{BotCommands.MirrorCommand}','Start Mirroring'), 
         (f'{BotCommands.ZipMirrorCommand}','Start mirroring and upload as .zip'),
         (f'{BotCommands.UnzipMirrorCommand}','Extract files'),
