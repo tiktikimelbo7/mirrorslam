@@ -211,6 +211,7 @@ def bot_help(update, context):
 botcmds = [
         (f'{BotCommands.HelpCommand}','Get Detailed Help'),
         (f'{BotCommands.StartCommand}','Start The Bot'),
+        (f'{BotCommands.ConfigMenuCommand}','Configuration of The bot')
         (f'{BotCommands.MirrorCommand}','Start Mirroring'), 
         (f'{BotCommands.ZipMirrorCommand}','Start mirroring and upload as .zip'),
         (f'{BotCommands.UnzipMirrorCommand}','Extract files'),
@@ -255,7 +256,9 @@ def main():
                     bot.sendMessage(chat_id=i, text=text, parse_mode=ParseMode.HTML)
         except Exception as e:
             LOGGER.warning(e)
-    # bot.set_my_commands(botcmds)
+
+    bot.set_my_commands(botcmds)
+
     start_handler = CommandHandler(BotCommands.StartCommand, start, run_async=True)
     ping_handler = CommandHandler(BotCommands.PingCommand, ping,
                                   filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
