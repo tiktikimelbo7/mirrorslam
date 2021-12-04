@@ -1,5 +1,5 @@
 from telegram.ext import CommandHandler
-from bot.helper.mirror_utils.upload-utils.gdriveTools import GoogleDriveHelper
+from bot.helper.mirror_utils.upload_utils.gdriveTools import GoogleDriveHelper
 from bot import LOGGER, dispatcher
 from bot.helper.telegram_helper.message_utils import *
 from bot.helper.telegram_helper.filters import CustomFilters
