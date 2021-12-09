@@ -1,4 +1,4 @@
-import heroku
+import heroku3
 
 from functools import wraps
 from pyrogram.types import Message
