@@ -255,6 +255,12 @@ except KeyError:
     INDEX_URL = None
     INDEX_URLS.append(None)
 try:
+    SEARCH_API_LINK = getConfig('SEARCH_API_LINK')
+    if len(SEARCH_API_LINK) == 0:
+        raise KeyError
+except KeyError:
+    SEARCH_API_LINK = None
+try:
     TORRENT_DIRECT_LIMIT = getConfig('TORRENT_DIRECT_LIMIT')
     if len(TORRENT_DIRECT_LIMIT) == 0:
         TORRENT_DIRECT_LIMIT = None
@@ -457,14 +463,6 @@ if os.path.exists('drive_folder'):
                 INDEX_URLS.append(temp[2])
             except IndexError as e:
                 INDEX_URLS.append(None)
-                
-SEARCH_PLUGINS = os.environ.get('SEARCH_PLUGINS', None)
-if SEARCH_PLUGINS is not None:
-    SEARCH_PLUGINS = json.loads(SEARCH_PLUGINS)
-    qbclient = get_client()
-    qbclient.search_install_plugin(SEARCH_PLUGINS)
-
-
 try:
     SEARCH_PLUGINS = getConfig('SEARCH_PLUGINS')
     if len(SEARCH_PLUGINS) == 0:
