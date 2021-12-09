@@ -210,6 +210,7 @@ def bot_help(update, context):
 
 botcmds = [
         (f'{BotCommands.HelpCommand}','Get Detailed Help'),
+        (f'{BotCommands.SearchCommand}','Get Torrent By Searching'),
         (f'{BotCommands.StartCommand}','Start The Bot'),
         (f'{BotCommands.ConfigMenuCommand}','Configuration of The bot'),
         (f'{BotCommands.MirrorCommand}','Start Mirroring'), 
