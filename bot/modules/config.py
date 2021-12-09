@@ -1,3 +1,6 @@
+# Implement By https://github.com/jusidama18
+# Based on this https://github.com/DevsExpo/FridayUserbot/blob/master/plugins/heroku_helpers.py
+
 from pyrogram import filters, types, emoji
 from bot.helper.telegram_helper.bot_commands import BotCommands
 from bot import app, OWNER_ID, bot
@@ -189,7 +192,7 @@ async def config_button(_, query):
     elif data == '9':
         return await query.message.edit(
             __header__.format(data)
-            + f"**[ Others Config ]**\n\n**VIEW_LINK:** `{VIEW_LINK}`\n\n**STATUS_LIMIT:** `{STATUS_LIMIT}`\n\n**DOWNLOAD_STATUS_UPDATE_INTERVAL:** `{DOWNLOAD_STATUS_UPDATE_INTERVAL}`\n\n**IGNORE_PENDING_REQUESTS:** `{IGNORE_PENDING_REQUESTS}`\n\n**AUTO_DELETE_MESSAGE_DURATION:** `{AUTO_DELETE_MESSAGE_DURATION}`\n\n**DOWNLOAD_DIR:** `{DOWNLOAD_DIR}`\n\n**DATABASE_URL:** `{DB_URI}`",
+            + f"**[ Others Config ]**\n\n**VIEW_LINK:** `{VIEW_LINK}`\n\n**STATUS_LIMIT:** `{STATUS_LIMIT}`\n\n**TIMEZONE:** `{TIMEZONE}`\n\n**DOWNLOAD_STATUS_UPDATE_INTERVAL:** `{DOWNLOAD_STATUS_UPDATE_INTERVAL}`\n\n**IGNORE_PENDING_REQUESTS:** `{IGNORE_PENDING_REQUESTS}`\n\n**AUTO_DELETE_MESSAGE_DURATION:** `{AUTO_DELETE_MESSAGE_DURATION}`\n\n**DOWNLOAD_DIR:** `{DOWNLOAD_DIR}`\n\n**DATABASE_URL:** `{DB_URI}`",
             reply_markup=types.InlineKeyboardMarkup(
                 [
                     [
@@ -203,7 +206,7 @@ async def config_button(_, query):
     elif data == '10':
         return await query.message.edit(
             __header__.format(data)
-            + f"**[ qBittorrent Config ]**\n\n**IS_VPS:** `{IS_VPS}`\n\n**SERVER_PORT:** `{SERVER_PORT}`\n\n**BASE_URL_OF_BOT:** `{BASE_URL}`\n\n**[ Updater Config ]**\n\n**UPSTREAM_REPO:** `{UPSTREAM_REPO}`\n\n**UPSTREAM_BRANCH:** `{UPSTREAM_BRANCH}`\n\n**ACCOUNTS_ZIP_URL:** `{ACCOUNTS_ZIP_URL}`\n\n**TOKEN_PICKLE_URL:** `{TOKEN_PICKLE_URL}`",
+            + f"**[ Updater Config ]**\n\n**UPSTREAM_REPO:** `{UPSTREAM_REPO}`\n\n**UPSTREAM_BRANCH:** `{UPSTREAM_BRANCH}`",
             reply_markup=types.InlineKeyboardMarkup(
                 [
                     [
