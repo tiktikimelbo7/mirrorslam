@@ -4,7 +4,8 @@
 from pyrogram import filters, types, emoji
 from bot.helper.telegram_helper.bot_commands import BotCommands
 from bot import app, OWNER_ID, bot
-from bot.helper import get_text, check_heroku
+from bot.helper.ext_utils.heroku_utils import check_heroku
+from bot.helper.telegram_helper.message_utils import get_text
 from bot import *
 
 # Add Variable
