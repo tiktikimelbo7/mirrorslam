@@ -219,3 +219,10 @@ def get_media_info(path):
         title = None
     return duration, artist, title
 
+def safe_filename(path_):
+    if path_ is None:
+        return
+    safename = path_.replace("'", "").replace('"', "")
+    if safename != path_:
+        os.rename(path_, safename)
+    return safename
