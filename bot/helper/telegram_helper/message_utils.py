@@ -152,3 +152,16 @@ def sendStatusMessage(msg, bot):
         else:
             message = sendMarkup(progress, bot, msg, buttons)
         status_reply_dict[msg.message.chat.id] = message
+
+def get_text(message: Message):  # -> None | str: #TODO python 3.10
+    """Extract Text From Commands"""
+    text_to_return = message.text
+    if message.text is None:
+        return None
+    if " " in text_to_return:
+        try:
+            return message.text.split(None, 1)[1]
+        except IndexError:
+            return None
+    else:
+        return None
