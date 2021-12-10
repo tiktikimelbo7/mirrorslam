@@ -27,8 +27,11 @@ def speedtest(update, context):
 <b>Ping:</b> <code>{result['ping']} ms</code>
 <b>ISP Rating:</b> <code>{result['client']['isprating']}</code>
 '''
-    editMessage(string_speed, speed)
-
+   ed_msg.delete()
+    try:
+        update.effective_message.reply_photo(path, string_speed, parse_mode=ParseMode.HTML)
+    except:
+        update.effective_message.reply_text(string_speed, parse_mode=ParseMode.HTML)
 
 def speed_convert(size):
     """Hi human, you can't read bytes?"""
