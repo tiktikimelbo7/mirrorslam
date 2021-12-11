@@ -41,7 +41,7 @@ def check_heroku(func):
 
 # Preparing For Update Bot
 # Implement by https://github.com/jusidama18 and Based on this https://github.com/DevsExpo/FridayUserbot/blob/master/plugins/updater.py
-def fetch_heroku_git_url():
+def fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME):
     if not HEROKU_API_KEY:
         return None
     if not HEROKU_APP_NAME:
