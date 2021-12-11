@@ -45,4 +45,6 @@ class _BotCommands:
         self.LookCommand = 'look'
         self.MediaInfoCommand = 'mediainfo'
         self.ConfigMenuCommand = 'config'
+        self.UpdateCommand = 'update'
+
 BotCommands = _BotCommands()
