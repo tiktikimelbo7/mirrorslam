@@ -14,7 +14,8 @@ from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 from pyrogram import filters
 
 from bot import app, OWNER_ID, UPSTREAM_REPO, UPSTREAM_BRANCH, bot
-from bot.helper.telegram_helper.message_utils import get_text, HEROKU_URL
+from bot.helper.telegram_helper.message_utils import get_text
+from bot.helper.ext_utils.heroku_utils HEROKU_URL
 from bot.helper.telegram_helper.bot_commands import BotCommands
 
 REPO_ = UPSTREAM_REPO
