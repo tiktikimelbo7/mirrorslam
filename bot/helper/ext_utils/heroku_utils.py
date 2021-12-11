@@ -41,23 +41,23 @@ def check_heroku(func):
 
 # Preparing For Update Bot
 # Implement by https://github.com/jusidama18 and Based on this https://github.com/DevsExpo/FridayUserbot/blob/master/plugins/updater.py
-def fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME):
-    if not HEROKU_API_KEY:
+def fetch_heroku_git_url(api_key, app_name):
+    if not api_key:
         return None
-    if not HEROKU_APP_NAME:
+    if not app_name:
         return None
-    heroku = heroku3.from_key(HEROKU_API_KEY)
+    heroku = heroku3.from_key(api_key)
     try:
         heroku_applications = heroku.apps()
-    except Exception:
+    except:
         return None
     heroku_app = None
     for app in heroku_applications:
-        if app.name == HEROKU_APP_NAME:
+        if app.name == app_name:
             heroku_app = app
             break
     if not heroku_app:
         return None
-    return heroku_app.git_url.replace("https://", "https://api:" + HEROKU_API_KEY + "@")
+    return heroku_app.git_url.replace("https://", "https://api:" + api_key + "@")
 
-    HEROKU_URL = fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME)
+HEROKU_URL = fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME)
