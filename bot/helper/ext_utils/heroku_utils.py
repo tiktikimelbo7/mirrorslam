@@ -60,6 +60,4 @@ def fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME):
         return None
     return heroku_app.git_url.replace("https://", "https://api:" + HEROKU_API_KEY + "@")
 
-class Config((object)):
-
     HEROKU_URL = fetch_heroku_git_url(HEROKU_API_KEY, HEROKU_APP_NAME)
