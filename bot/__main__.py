@@ -211,6 +211,7 @@ def bot_help(update, context):
     sendMarkup(help_string, context.bot, update, reply_markup)
 
 botcmds = [
+        (f'(BotCommands.SpeedCommand}','Speed Of The Bot'),
         (f'{BotCommands.UpdateCommand}','Get Updated by Repository'),
         (f'{BotCommands.HelpCommand}','Get Detailed Help'),
         (f'{BotCommands.SearchCommand}','Get Torrent By Searching'),
