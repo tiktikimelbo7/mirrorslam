@@ -60,9 +60,9 @@ async def update_it(client, message):
             repo.git.reset("--hard", "FETCH_HEAD")
         subprocess.run(["pip3",  "install", "--no-cache-dir", "-r",  "requirements.txt"])
         await msg_.edit("`Updated Sucessfully! Give Me Some Time To Restart!`")
-        with open("./aria.sh", 'rb') as file:
+        with open("./aria.conf", 'rb') as file:
             script = file.read()
-        subprocess.call("./aria.sh", shell=True)
+        subprocess.call("./aria.conf", shell=True)
         args = [sys.executable, "-m", "bot"]
         execle(sys.executable, *args, environ)
         exit()
