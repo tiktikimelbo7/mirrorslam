@@ -8,7 +8,7 @@ from https://github.com/AvinashReddy3108/PaperplaneExtended . I hereby take no c
 than the modifications. See https://github.com/AvinashReddy3108/PaperplaneExtended/commits/master/userbot/modules/direct_links.py
 for original authorship. """
 
-from bot import LOGGER, UPTOBOX_TOKEN
+from bot import LOGGER, UPTOBOX_TOKEN, PHPSESSID, CRYPT
 import json
 import math
 import re
@@ -16,6 +16,9 @@ import urllib.parse
 from os import popen
 from random import choice
 from urllib.parse import urlparse
+from bot.helper.ext_utils.bot_utils import is_gdtot_link
+
+
 
 import lk21
 import requests, cfscrape
