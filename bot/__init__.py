@@ -211,6 +211,18 @@ telegraph = Telegraph()
 telegraph.create_account(short_name=sname)
 telegraph_token = telegraph.get_access_token()
 
+
+try:
+    PHPSESSID = getConfig('PHPSESSID')
+    CRYPT = getConfig('CRYPT')
+    if len(PHPSESSID) == 0 or len(CRYPT) == 0:
+        raise KeyError
+except KeyError:
+    PHPSESSID = None
+    CRYPT = None
+
+
+
 try:
     TG_SPLIT_SIZE = getConfig('TG_SPLIT_SIZE')
     if len(TG_SPLIT_SIZE) == 0 or int(TG_SPLIT_SIZE) > 2097152000:
