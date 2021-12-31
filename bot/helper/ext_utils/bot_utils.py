@@ -155,7 +155,7 @@ def get_readable_message():
                     except:
                         pass
                     try:
-                        msg += f"\n<b>⚙️ Ping : Aria2</b>\n<b>📶:</b> {download.aria_download().connections}"
+                        msg += f"\n<b>⚙️ Engine : Aria2</b>\n<b>📶 Ping :</b> {download.aria_download().connections}"
                     except:
                         pass
                     try:
