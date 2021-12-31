@@ -259,8 +259,11 @@ class MirrorListener(listeners.MirrorListeners):
                 msg += f'\n<b>📚 SubFolders: </b>{folders}'
                 msg += f'\n<b>📁 Files: </b>{files}'
             buttons = button_build.ButtonMaker()
-            link = short_url(link)
-            buttons.buildbutton("☁️ ᴅʀɪᴠᴇ ʟɪɴᴋ ☁️", link)
+            if SHORTENER is not None and SHORTENER_API is not None:
+                surl = short_url(link)
+                buttons.buildbutton("☁️ Drive Link", surl)
+            else:
+                buttons.buildbutton("☁️ Drive Link", link)
             LOGGER.info(f'Done Uploading {download_dict[self.uid].name()}')
             if INDEX_URL is not None:
                 url_path = requests.utils.quote(f'{download_dict[self.uid].name()}')
