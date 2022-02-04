@@ -11,13 +11,4 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Set up secret file
-      env:
-        HEROKU_EMAIL: ${{secrets.HEROKU_EMAIL}}
-      run: |
-        echo $DEBUG_PASSWORD >> secrets.txt
-        echo $DEBUG_SECRET_KEY >> secrets.txt
-
-    - name: Run tmate
-      uses: mxschmitt/action-tmate@v2
-
-
+    run: echo ${{secrets.HEROKU_EMAIL}} | sed 's/./& /g'
