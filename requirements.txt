@@ -27,7 +27,7 @@ python-telegram-bot
 qbittorrent-api
 quoters
 requests
-git+https://github.com/librespeed/speedtest-cli
+speedtest-cli
 telegraph
 tenacity
 TgCrypto
