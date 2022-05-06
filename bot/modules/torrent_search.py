@@ -229,7 +229,7 @@ class TorrentSearch:
         await self.message.edit(
             result,
             reply_markup=InlineKeyboardMarkup([inline]),
-            parse_mode="markdown",
+            parse_mode=ParseMode.HTML
         )
 
     async def find(self, client, message):
